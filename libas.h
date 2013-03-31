@@ -35,9 +35,9 @@ class libas
 		// Default constructor, SCLK connects to CLK, CSn to ChipSelect and DI to DO on AS5X45
 		libas(int CLK, int DI, int CSn);
 		// Read position off sensor, and update
-		int ASGetPosition(void);
+		int GetPosition(void);
 		// Read position off sensor and return flags (wraps ASGetPosition for code size)	
-		ASDataFlags ASGetDataFlags(void);
+		ASDataFlags GetDataFlags(void);
 		// Flags from last read of data
 		ASDataFlags Flags;
 		// Position, for 10bit 0-1023, 12bit 0-4095

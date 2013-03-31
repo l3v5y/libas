@@ -28,13 +28,13 @@ libas::libas(int CLK, int DI, int CS)
 }
 
 // Read position off sensor and return flags (wraps ASGetPosition for code size)
-ASDataFlags libas::ASGetDataFlags(void)
+ASDataFlags libas::GetDataFlags(void)
 {
 	ASGetPosition();
 	return Flags;
 }
 // Read position off sensor, and update
-int libas::ASGetPosition(void)
+int libas::GetPosition(void)
 {
 	// Temp position
 	int tempPosition = 0;
